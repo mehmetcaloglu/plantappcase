@@ -10,9 +10,9 @@ import
     SafeAreaView,
     StyleSheet,
     Text,
-    TouchableOpacity,
     View
   } from 'react-native';
+import PrimaryButton from '../../components/PrimaryButton';
 import { OnboardingStackParamList } from '../../navigation/OnboardingNavigator';
 import { colors, typography } from '../../styles/theme';
 
@@ -85,12 +85,10 @@ const WelcomeScreen = () => {
           </View>
 
           {/* Button */}
-          <TouchableOpacity 
-            style={styles.button}
+          <PrimaryButton 
+            title="Get Started"
             onPress={() => navigation.navigate('PlantIdentification')}
-          >
-            <Text style={styles.buttonText}>Get Started</Text>
-          </TouchableOpacity>
+          />
 
           {/* Terms Text */}
           <View style={styles.termsContainer}>

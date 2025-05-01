@@ -9,9 +9,9 @@ import
     SafeAreaView,
     StyleSheet,
     Text,
-    TouchableOpacity,
     View
   } from 'react-native';
+import PrimaryButton from '../../components/PrimaryButton';
 import { OnboardingStackParamList } from '../../navigation/OnboardingNavigator';
 import { colors, typography } from '../../styles/theme';
 
@@ -53,12 +53,10 @@ const PlantIdentificationScreen = () => {
               />
           </View>
 
-          <TouchableOpacity 
-              style={styles.button}
-              onPress={() => navigation.navigate('PlantGuides')}
-            >
-              <Text style={styles.buttonText}>Continue</Text>
-          </TouchableOpacity>
+          <PrimaryButton 
+            title="Continue"
+            onPress={() => navigation.navigate('PlantGuides')}
+          />
 
           <View style={styles.sliderContainer}>
               <Image 

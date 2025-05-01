@@ -1,7 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { Dimensions, Image, ImageBackground, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Dimensions, Image, ImageBackground, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import PrimaryButton from '../../components/PrimaryButton';
 import { OnboardingStackParamList } from '../../navigation/OnboardingNavigator';
 import { colors, typography } from '../../styles/theme';
 type NavigationProp = StackNavigationProp<OnboardingStackParamList, 'PlantGuides'>;
@@ -18,7 +19,6 @@ const PlantGuidesScreen = () => {
     >
       <SafeAreaView style={styles.container}>
         <View style={styles.contentContainer}>
-          {/* Header Text */}
           <View style={styles.headerContainer}>
             <Text style={styles.title}>Get plant care guides</Text>
             <Text style={styles.subtitle}>Find out how to care for plants, watering and lighting needs.</Text>
@@ -36,7 +36,6 @@ const PlantGuidesScreen = () => {
               resizeMode="contain"
             />
 
-            {/* Guide-Background.png */}
             <Image 
               source={require('../../assets/images/onboarding/Guide-Background.png')} 
               style={styles.guideBackground}
@@ -47,12 +46,11 @@ const PlantGuidesScreen = () => {
             
           </View>
 
-          <TouchableOpacity 
-            style={styles.button}
+          <PrimaryButton 
+            title="Continue"
             onPress={() => navigation.navigate('Paywall')}
-          >
-            <Text style={styles.buttonText}>Continue</Text>
-          </TouchableOpacity>
+            style={styles.continueButton}
+          />
 
           <View style={styles.sliderContainer}>
             <Image 
@@ -112,7 +110,6 @@ const styles = StyleSheet.create({
     height: height * 0.625,
     marginVertical: 20,
     position: 'relative',
-    // backgroundColor: 'red',
   },
   phoneImage: {
     width: '100%',
@@ -133,27 +130,11 @@ const styles = StyleSheet.create({
     height: '120%',
     position: 'absolute',
     top: -70,
-    // zIndex: -10,
-    // Rotation
-    // -73.6°
-    // blur 10
-    // blur: 10,
     transform: [{ rotate: '73.6deg' }],
   },
-  button: {
-    backgroundColor: colors.primary,
-    paddingVertical: 16,
-    borderRadius: 12,
-    width: '100%',
-    alignItems: 'center',
-    marginBottom: 16,
+  continueButton: {
     bottom: -10,
     zIndex: 30,
-  },
-  buttonText: {
-    color: '#FFFFFF',
-    fontFamily: typography.fontFamily.bold,
-    fontSize: 15,
   },
   sliderContainer: {
     width: '100%',
