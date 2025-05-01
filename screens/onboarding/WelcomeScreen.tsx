@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
   highlight: {
     fontFamily: typography.fontFamily.boldItalic,
     fontSize: 30,
-    // fontWeight: 'bold',
   },
   subtitle: {
     fontSize: 16,
@@ -153,13 +152,11 @@ const styles = StyleSheet.create({
     height: height * 0.625,
     marginVertical: 20,
     position: 'relative',
-    // backgroundColor: 'red',
   },
   plantImage: {
     width: '100%',
     height: '95%',
     bottom: -10,
-    // z index 2. en büyük
     zIndex: 19
   },
   cameraIcon: {

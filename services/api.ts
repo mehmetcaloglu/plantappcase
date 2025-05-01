@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { ApiResponse, Category, Question } from '../types';
 
-const api = axios.create({
+const api = axios.create( {
+  // normalde .env da olması gerekir bu url lerin ancak case study için gerek görmedim.
   baseURL: 'https://dummy-api-jtg6bessta-ey.a.run.app',
 });
 

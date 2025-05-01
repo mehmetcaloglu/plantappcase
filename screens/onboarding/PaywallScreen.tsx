@@ -23,7 +23,9 @@ const PaywallScreen = () =>
     dispatch(completeOnboarding());
   };
 
-  const handleTermsPress = () => {
+  const handleTermsPress = () =>
+  {
+    // örnek bir url
     Linking.openURL('https://plantapp.app/terms');
   };
 
@@ -75,7 +77,6 @@ const PaywallScreen = () =>
               />
             </ScrollView>
           </View>
-          {/* <Text style={ styles.title }>Premium Özellikler</Text> */}
           
           {/* padding vertical 20 */}
           <View style={{ padding: 20, width: '100%' }} >
@@ -170,28 +171,24 @@ const styles = StyleSheet.create({
     
     width: '100%',
     alignItems: 'center',
-    // padding: 20,
     paddingBottom: 0,
   },
   title: {
     fontSize: 30,
     fontFamily: typography.fontFamily.bold,
     color: '#FFFFFF',
-    // marginBottom: 30,
   },
   titleContainer: {
     width: '100%',
     paddingHorizontal: 20,
     alignItems: 'flex-start',
     marginBottom: 20,
-    // backgroundColor: 'red',
   },
   subtitle: {
     fontSize: 17,
     fontFamily: typography.fontFamily.regular,
     color: '#FFFFFF',
     opacity: 0.7,
-    // marginBottom: 30,
   },
   titleBold: {
     fontFamily: typography.fontFamily.bold,
@@ -201,7 +198,6 @@ const styles = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    // marginBottom: 30,
     alignSelf: 'stretch',
   },
   planOption: {
@@ -259,18 +255,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#28AF6E',
     paddingVertical: 4,
     paddingHorizontal: 8,
-    // borderRadius: 12,
     borderTopRightRadius: 12,
     borderBottomLeftRadius:12,
     top: 0,
     position: 'absolute',
     right: 0,
-    // text center
     textAlign: 'center',
     verticalAlign: 'middle',
   },
   saveTagText: {
-    // center text
     textAlign: 'center',
     color: '#FFFFFF',
     fontSize: 12,
@@ -286,7 +279,6 @@ const styles = StyleSheet.create({
     fontSize: 11,
     textAlign: 'center',
     opacity: 0.55,
-    // marginBottom: 20,
     lineHeight: 16,
   },
   linksContainer: {
@@ -331,8 +323,6 @@ const styles = StyleSheet.create({
   featuresContainer: {
     width: '100%',
     alignItems: 'center',
-    // marginLeft: 20,
-    // paddingLeft: 12,
   },
   scrollView: {
     width: '100%',

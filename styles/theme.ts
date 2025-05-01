@@ -1,3 +1,5 @@
+// çalışmıyor, çözülemedi
+
 export const colors = {
   primary: '#28AF6E',
   primaryDark: '#219653',

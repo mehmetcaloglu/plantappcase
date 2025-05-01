@@ -18,7 +18,6 @@ import { colors, typography } from '../../styles/theme';
 
 type NavigationProp = StackNavigationProp<OnboardingStackParamList, 'PlantIdentification'>;
 
-// Ekran boyutlarını al
 const { width, height } = Dimensions.get( 'window' );
 
 const PlantIdentificationScreen = () => {
@@ -121,15 +120,12 @@ const styles = StyleSheet.create( {
     height: height * 0.625,
     marginVertical: 20,
     position: 'relative',
-    // backgroundColor: 'red',
   },
   phoneImage: {
     width: '100%',
     height: '95%',
     bottom: -10,
-    // z index 2. en büyük
     zIndex: 19,
-    // backgroundColor: 'red',
     
   },
   button: {
@@ -148,7 +144,6 @@ const styles = StyleSheet.create( {
 
   brushIcon: {
     position: 'absolute',
-    // backgroundColor: 'red',
     width: 120,
     height:15,
     bottom: -20,
@@ -161,7 +156,7 @@ const styles = StyleSheet.create( {
     marginTop: 8,
   },
   sliderImage: {
-    // width: '100%',
+    width: '100%',
     margin: 10,
     height: 6,
   },

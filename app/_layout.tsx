@@ -11,6 +11,7 @@ export default function RootLayout() {
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
     
+    // çalışmıyor ! (yapamadım)
     // Normal weights
     'Rubik-Thin': require('../assets/fonts/Rubik-Light.ttf'), // 100 (Light ile temsil ediliyor)
     'Rubik-ExtraLight': require('../assets/fonts/Rubik-Light.ttf'), // 200 (Light ile temsil ediliyor)

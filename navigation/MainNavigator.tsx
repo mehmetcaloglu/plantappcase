@@ -3,11 +3,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 
-// Navigators
 import HomeNavigator from './HomeNavigator';
 import OnboardingNavigator from './OnboardingNavigator';
 
-// Stack navigator için parametre listesi
 export type RootStackParamList = {
   Onboarding: undefined;
   Home: undefined;
