@@ -16,7 +16,7 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 const MainNavigator = () => {
-  // Redux'tan onboarding durumunu al
+  //redux'tan onboarding durumunu al
   const isOnboardingCompleted = useSelector(
     (state: RootState) => state.onboarding.isOnboardingCompleted
   );
