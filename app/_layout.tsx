@@ -10,6 +10,10 @@ export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    'Rubik-Regular': require('../assets/fonts/Rubik-Regular.ttf'),
+    'Rubik-Bold': require('../assets/fonts/Rubik-Bold.ttf'),
+    'Rubik-Italic': require('../assets/fonts/Rubik-Italic.ttf'),
+    'Rubik-BoldItalic': require('../assets/fonts/Rubik-BoldItalic.ttf'),
   });
 
   if (!loaded) {

@@ -13,6 +13,13 @@ export const colors = {
 };
 
 export const typography = {
+  fontFamily: {
+    regular: 'Rubik-Regular',
+    bold: 'Rubik-Bold',
+    italic: 'Rubik-Italic',
+    boldItalic: 'Rubik-BoldItalic',
+    mono: 'SpaceMono',
+  },
   fontSizes: {
     xs: 12,
     sm: 14,
