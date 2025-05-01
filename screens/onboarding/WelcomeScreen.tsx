@@ -136,9 +136,9 @@ const styles = StyleSheet.create({
     textAlign: 'left',
   },
   highlight: {
-    fontFamily: typography.fontFamily.bold,
-    fontSize: 40,
-    color: "red",
+    fontFamily: typography.fontFamily.boldItalic,
+    fontSize: 30,
+    // fontWeight: 'bold',
   },
   subtitle: {
     fontSize: 16,
