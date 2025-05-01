@@ -1,11 +1,11 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
+import BottomTabNavigator from './BottomTabNavigator';
 
 // Screens
-import HomeScreen from '../screens/home/HomeScreen';
 
 export type HomeStackParamList = {
-  HomeScreen: undefined;
+  Main: undefined;
 };
 
 const Stack = createStackNavigator<HomeStackParamList>();
@@ -17,7 +17,7 @@ const HomeNavigator = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="Main" component={BottomTabNavigator} />
     </Stack.Navigator>
   );
 };

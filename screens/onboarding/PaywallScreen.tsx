@@ -1,13 +1,21 @@
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import React, { useState } from 'react';
 import { Dimensions, Image, Linking, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import FeatureCard from '../../components/FeatureCard';
 import PrimaryButton from '../../components/PrimaryButton';
+import { OnboardingStackParamList } from '../../navigation/OnboardingNavigator';
 import { completeOnboarding } from '../../redux/slices/onboardingSlice';
 import { typography } from '../../styles/theme';
 
+type PaywallScreenNavigationProp = StackNavigationProp<OnboardingStackParamList, 'Paywall'>;
+
+
 const { width, height } = Dimensions.get('window');
-const PaywallScreen = () => {
+const PaywallScreen = () =>
+{
+  const navigation = useNavigation<PaywallScreenNavigationProp>();
   const dispatch = useDispatch();
   const [selectedPlan, setSelectedPlan] = useState('yearly');
 
@@ -50,7 +58,7 @@ const PaywallScreen = () => {
               style={styles.scrollView}
             >
               <FeatureCard 
-                icon={require('../../assets/images/onboarding/Unlimited-Icon.png')} 
+                icon={require('../../assets/images/onboarding/Scan-Icon.png')} 
                 title="Unlimited" 
                 subtitle="Plant Identify" 
                 firstCard={true}
@@ -122,7 +130,7 @@ const PaywallScreen = () => {
 
             <PrimaryButton 
               title="Try free for 3 days"
-              onPress={() => console.log('Try free for 3 days')}
+              onPress={handleClose}
               style={styles.freeTrial}
             />
             

@@ -1,10 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
+import categoriesReducer from './slices/categoriesSlice';
 import onboardingReducer from './slices/onboardingSlice';
+import questionsReducer from './slices/questionsSlice';
 
 export const store = configureStore({
   reducer: {
     onboarding: onboardingReducer,
-    // Diğer reducerlar buraya eklenecek
+    questions: questionsReducer,
+    categories: categoriesReducer,
   },
 });
 
